@@ -1,0 +1,140 @@
+@use '../../../scss/abstracts/mixins';
+@use '../../../scss/abstracts/functions';
+
+a {
+  color: #f73f07;
+}
+
+.container {
+  max-width: 500px;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+.page-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(290% 100% at 50% 0%, rgb(237, 222, 205) 1.7%, rgb(229, 213, 203) 27.7%, rgb(222, 205, 202) 42%, rgb(180, 156, 192) 87%),
+    linear-gradient(90deg, #b991b5 0%, #ada4c9 100%);
+
+}
+
+.main {
+  padding-block: 16px;
+  overflow-y: clip;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    width: 800px;
+    aspect-ratio: 1;
+    background-image: url(../images/splash01.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -40px) rotate(320deg);
+    z-index: -1;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: functions.clamp1(32, 40);
+  }
+
+  &__img {
+    z-index: 1;
+    position: relative;
+    margin-inline: -16px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__img-text {
+    position: absolute;
+    top: 77%;
+    right: 23%;
+    // bottom: 13.3%;
+    left: 30%;
+
+    font-size: functions.clamp1(13, 16);
+
+    line-height: 1.15;
+    font-weight: 600;
+    text-align: center;
+
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__button {
+    border-radius: 20px;
+    background-color: #ffe9b4;
+    // padding: 32px clamp(2rem, 0.3333rem + 7.4074vw, 3rem);
+    padding: 32px clamp(1.67rem, 0.33rem + 7.4vw, 3rem);
+    margin-top: -50px;
+
+    ul {
+      font-size: 14px;
+      list-style: none;
+      padding: 0;
+
+
+      li {
+        padding-inline-start: 30px;
+        margin-bottom: 1em;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          width: 13px;
+          height: 13px;
+          background-image: url(../images/check.svg);
+          background-size: contain;
+          border: 1px solid #111;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
+
+
+.wa-link {
+  color: #fff;
+  background-color: #26d367;
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .2);
+  font-size: clamp(1rem, 0.5833rem + 1.8519vw, 1.25rem);
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  gap: .43em;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  padding: .5em 1em;
+  position: relative;
+  z-index: 2;
+  transition-duration: .3s;
+
+  svg {
+    width: 2.5em;
+    aspect-ratio: 1;
+  }
+
+  @include mixins.hover {
+    scale: 1.05;
+    box-shadow: 0px 2px 4px 4px rgba(0, 0, 255, 0.1);
+  }
+}

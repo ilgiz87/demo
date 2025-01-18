@@ -1,0 +1,9 @@
+@use '../abstracts/mixins';
+@use '../abstracts/functions';
+
+
+.container {
+    max-width: functions.toRem(1200);
+    margin-inline: auto;
+    padding-inline: functions.toRem(16);
+  }

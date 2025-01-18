@@ -1,0 +1,44 @@
+/* header */
+.header {
+    padding-block: 2.5rem;
+
+    .container {
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 500;
+    }
+
+    &__menu {
+        grid-column: span 3;
+        color: #777;
+
+        a:hover {
+            color: var(--body-text-color);
+        }
+    }
+
+    &__phone {
+        font-size: 20px;
+        justify-self: end;
+    }
+
+    &__button {
+        font-size: 14px;     
+    }
+
+    .menu {
+        display: flex;
+        gap: .5em;
+        align-items: center;
+        text-align: center;
+
+        >li {
+            flex-basis: 20%;
+
+        }
+    }
+}

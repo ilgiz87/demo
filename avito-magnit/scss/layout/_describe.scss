@@ -1,0 +1,32 @@
+@use '../../../scss/abstracts/functions' as *;
+
+.describe {
+  margin-bottom: 2.5rem;
+
+  &__content {
+    font-size: toRem(20);
+    display: flex;
+    column-gap: var(--column-gap);
+    align-items: center;
+  }
+
+  &__img {
+    border-radius: var(--border-radius);
+  }
+}
+
+.gift {
+  display: flex;
+  column-gap: var(--column-gap);
+  align-items: center;
+  justify-content: space-between;
+
+  &__content {
+    flex-basis: 32rem;
+  }
+
+  &__heading {
+    font-size: toRem(32);
+    font-weight: 400;
+  }
+}

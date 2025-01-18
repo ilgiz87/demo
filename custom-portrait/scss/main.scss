@@ -1,0 +1,14 @@
+
+@use './abstracts/css-variables';
+@use '../../scss/abstracts/normalize';
+
+@use 'components/buttons';
+
+@use 'layout/main';
+@use 'layout/footer';
+@use 'layout/popup';
+
+
+
+// Файл для эксперементов и костылей
+@use 'components/shame';

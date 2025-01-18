@@ -1,0 +1,81 @@
+@use '../../../scss/abstracts/placeholders' as *;
+
+.popup {
+    @extend %visually-hidden;
+
+    &.open {
+        @extend %visually-un-hidden;
+        @extend %w100 ;
+
+        top: 0;
+        left: 0;
+        z-index: 10;
+        position: fixed;
+        height: 100vh;
+
+    }
+
+
+    &__overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, .6);
+        z-index: 11;
+
+        .open & {
+            @extend %w100 !optional;
+            @extend %h100 !optional;
+
+        }
+
+    }
+
+    &__window {
+        .open & {
+            width: calc(100% - 64px);
+            max-width: 900px;
+            padding: 32px;
+            border-radius: 20px;
+            background-color: #fbfbf9;
+
+            z-index: 12;
+
+            position: absolute;
+            top: 32px;
+            bottom: 32px;
+            left: 50%;
+            translate: -50%;
+
+            li {
+                margin-bottom: 1em;
+
+            }
+        }
+    }
+
+    &__heading {
+        margin-top: 0;
+
+    }
+
+    &__content {
+        overflow-y: scroll;
+        height: 100%;
+        height: calc(100% - 92px);
+    }
+
+    &__close {
+        background: none;
+        border: none;
+        padding: 0;
+        opacity: .35;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+}

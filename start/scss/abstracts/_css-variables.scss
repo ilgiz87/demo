@@ -1,0 +1,6 @@
+@use '../../../scss/abstracts/mixins';
+
+:root {
+  @include mixins.normalize-root
+  
+}

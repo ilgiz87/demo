@@ -1,0 +1,27 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    // font-size: 14px;
+    margin-block-start: auto;
+    padding-block: 1em;
+
+
+
+    &__left {
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 1em;
+
+        img {
+            max-width: 120px;
+        }
+
+    }
+    &__right{
+        margin-inline: auto;
+    }
+
+
+}
