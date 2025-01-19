@@ -1,9 +1,0 @@
-@use 'variables';
-@use 'mixins';
-@use '../components/root';
-
-:root {
-  @include mixins.normalize-root;
-  @include root.my-root;
-  
-}
